@@ -1,27 +1,32 @@
->📋  A template README.md for code accompanying a Machine Learning paper
+## A Neural-Guided Dynamic Symbolic Network for Exploring Mathematical Expressions from Data
 
-# My Paper Title
+![overview](overview.pdf)
 
-This repository is the official implementation of [My Paper Title](https://arxiv.org/abs/2030.12345). 
+This repository is the official implementation of [***A Neural-Guided Dynamic Symbolic Network for Exploring Mathematical Expressions from Data***](https://openreview.net/forum?id=pTmrk4XPFx) submitted to NeurIPS'23.
 
->📋  Optional: include a graphic explaining your approach/main result, bibtex entry, link to demos, blog posts and tutorials
+## Highlights
+
+- Our proposed ***<span style="font-variant: small-caps;">DySymNet</span>*** is a new search paradigm for symbolic regression (SR) that searches the symbolic network with various architectures instead of searching expressions in the large functional space.
+- ***<span style="font-variant: small-caps;">DySymNet</span>*** possesses promising capabilities in solving high-dimensional problems and optimizing coefficients, which are lacking in current SR methods.
+- Extensive numerical experiments demonstrated that ***<span style="font-variant: small-caps;">DySymNet</span>*** outperforms state-of-the-art baselines across various SR standard benchmark datasets and the well-known SRBench with more variables.
 
 ## Requirements
 
-To install requirements:
+Install the conda environment and packages:
 
 ```setup
-pip install -r requirements.txt
+conda env create -f environment.yml
+conda activate dysymnet
 ```
 
->📋  Describe how to set up the environment, e.g. pip/conda/docker commands, download datasets, etc...
+The packages have been tested on Linux.
 
-## Training
+## Getting started
 
 To train the model(s) in the paper, run this command:
 
 ```train
-python train.py --input-data <path_to_data> --alpha 10 --beta 20
+
 ```
 
 >📋  Describe how to train the models, with example commands on how to train the models in your paper, including the full training procedure and appropriate hyperparameters.
@@ -46,15 +51,23 @@ You can download pretrained models here:
 
 ## Results
 
-Our model achieves the following performance on :
+Our approach achieves the state-of-the-art  performance on **Standard benchmarks** and **SRBench benchmark**.
 
-### [Image Classification on ImageNet](https://paperswithcode.com/sota/image-classification-on-imagenet)
+#### Pareto plot on SRBench benchmark
 
-| Model name         | Top 1 Accuracy  | Top 5 Accuracy |
-| ------------------ |---------------- | -------------- |
-| My awesome model   |     85%         |      95%       |
+<p align = "center">
+<img src="img/Pareto_DySymNet.pdf" width="100%" alt="" align=center />
+</p>
+<p align = "center">
+</p>
 
->📋  Include a table of results from your paper, and link back to the leaderboard for clarity and context. If your main result is a figure, include that figure and link to the command or notebook to reproduce it. 
+**Our proposed *<span style="font-variant: small-caps;">DySymNet</span>* outperforms previous DL-based and GP-based SR methods in terms of fitting accuracy while maintaining a relatively small symbolic model size.** Pareto plot comparing the average test performance and model size of our method with baselines provided by the SRBench benchmark, both on *Feynman* dataset (left) and *Black-box* dataset (right).
+
+#### Fitting accuracy comparison
+
+![Fitting accuracy](img/Fitting_accuracy.png)
+
+**See the [paper](https://openreview.net/forum?id=pTmrk4XPFx) for more experimental results.**
 
 
 ## Contributing
