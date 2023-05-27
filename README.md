@@ -53,13 +53,13 @@ You can download pretrained models here:
 
 Our approach achieves the state-of-the-art  performance on **Standard benchmarks** and **SRBench benchmark**.
 
-#### Pareto plot on SRBench benchmark
+### Pareto plot on SRBench benchmark
 
 **Our proposed *<span style="font-variant: small-caps;">DySymNet</span>* outperforms previous DL-based and GP-based SR methods in terms of fitting accuracy while maintaining a relatively small symbolic model size.** Pareto plot comparing the average test performance and model size of our method with baselines provided by the SRBench benchmark, both on *Feynman* dataset (left) and *Black-box* dataset (right).
 
 ![pareto](img/Pareto_DySymNet.png)
 
-#### Fitting accuracy comparison
+### Fitting accuracy comparison
 
 ![Fitting accuracy](img/Fitting_accuracy.png)
 
