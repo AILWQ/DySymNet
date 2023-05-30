@@ -27,7 +27,7 @@ The packages have been tested on Linux.
 
 The main running script is `policy_gradient.py` and it relies on configuring runs via `params.py`. The `params.py` includes various hyperparameters of the controller RNN and the symbolic network. You can configure the following hyperparameters as required:
 
-#### parameters of symbolic network structure
+#### parameters for symbolic network structure
 
 - `funcs_avail`  configures the operator library and It's part of the search space. You can add the additional operators in the `functions.py` by referring to existing operators and place them inside `funcs_avail`  if you want to use them.
 - `n_layers` configures the number library of symbolic network layers. It's part of the search space.
