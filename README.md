@@ -35,46 +35,45 @@ The main running script is `policy_gradient.py` and it relies on configuring run
 
 #### parameters for controller RNN
 
-`num_epochs`  configures the epochs for sampling
-`batch_size`  configures the size for a batch sampling
-`input_size`  configures the input dim
-`optimizer`  configures the optimizer for training RNN
-`hidden_size`  configures the hidden dim
-`embedding_size`  configures the embedding dim
-`learning_rate1`  configures the learning rate for training RNN
-`risk_seeking`  configures using risk seeking policy gradient or not
-`risk_factor`  configures the risk factor
-`entropy_weight`  configures the entropy weight
-`reward_type`  configures the error type for computing reward. Default: mse
+- `num_epochs`  configures the epochs for sampling
+- `batch_size`  configures the size for a batch sampling
+- `input_size`  configures the input dim
+- `optimizer`  configures the optimizer for training RNN
+- `hidden_size`  configures the hidden dim
+- `embedding_size`  configures the embedding dim
+- `learning_rate1`  configures the learning rate for training RNN
+- `risk_seeking`  configures using risk seeking policy gradient or not
+- `risk_factor`  configures the risk factor
+- `entropy_weight`  configures the entropy weight
+- `reward_type`  configures the error type for computing reward. Default: mse
 
 #### parameters for symbolic network training
 
-`learning_rate2` configures the learning rate
-`reg_weight`  configures the regularizaiton weight
-`threshold`  configures the prunning threshold
-`trials`  configures the training trials
-`n_epochs1`  configures the epochs for the first training stage
-`n_epochs2`  configures the epochs for the second training stage
-`summary_step`  configures to summary for every n training steps
-`clip_grad`  configures using adaptive gradient clipping or not
-`max_norm` configures the norm threshold for gradient clipping
-`window_size`  configures the window size for adaptive gradient clipping
-`refine_constants`  confifures refining constants or not
-`n_restarts`  configures the number of restarts for BFGS optimization
-`add_bias`  configures adding bias or not
-`verbose`  configures printing training process or not
-`use_gpu`  configures using cuda or not
-`plot_reward`  configures plotting reward curve or not
+- `learning_rate2` configures the learning rate
+- `reg_weight`  configures the regularizaiton weight
+- `threshold`  configures the prunning threshold
+- `trials`  configures the training trials
+- `n_epochs1`  configures the epochs for the first training stage
+- `n_epochs2`  configures the epochs for the second training stage
+- `summary_step`  configures to summary for every n training steps
+- `clip_grad`  configures using adaptive gradient clipping or not
+- `max_norm` configures the norm threshold for gradient clipping
+- `window_size`  configures the window size for adaptive gradient clipping
+- `refine_constants`  confifures refining constants or not
+- `n_restarts`  configures the number of restarts for BFGS optimization
+- `add_bias`  configures adding bias or not
+- `verbose`  configures printing training process or not
+- `use_gpu`  configures using cuda or not
+- `plot_reward`  configures plotting reward curve or not
 
 #### parameters for genearting dataset
 
-`N_TRAIN`  configures the size of training dataset
-`N_VAL`  configures the size of validation dataset
-`NOISE` = 0  configures the standard deviation of noise for training dataset
-`DOMAIN`  configures the domain of dataset - range from which we sample x
-
-`N_TEST`  configures the size of test dataset
-`DOMAIN_TEST`  configures the domain of test dataset
+- `N_TRAIN`  configures the size of training dataset
+- `N_VAL`  configures the size of validation dataset
+- `NOISE` = 0  configures the standard deviation of noise for training dataset
+- `DOMAIN`  configures the domain of dataset - range from which we sample x
+- `N_TEST`  configures the size of test dataset
+- `DOMAIN_TEST`  configures the domain of test dataset
 
 #### other parameters
 
