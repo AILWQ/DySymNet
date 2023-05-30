@@ -23,31 +23,66 @@ The packages have been tested on Linux.
 
 ## Getting started
 
-To train the model(s) in the paper, run this command:
+### Configure runs
 
-```train
+The main running script is `policy_gradient.py` and it relies on configuring runs via `params.py`. The `params.py` includes various hyperparameters of the controller RNN and the symbolic network. You can configure the following hyperparameters as required:
 
-```
+#### parameters of symbolic network structure
 
->📋  Describe how to train the models, with example commands on how to train the models in your paper, including the full training procedure and appropriate hyperparameters.
+- `funcs_avail`  configures the operator library and It's part of the search space. You can add the additional operators in the `functions.py` by referring to existing operators and place them inside `funcs_avail`  if you want to use them.
+- `n_layers` configures the number library of symbolic network layers. It's part of the search space.
+- `num_func_layer` configure number library of operators in each layer. It's part of the search space.
 
-## Evaluation
+#### parameters for controller RNN
 
-To evaluate my model on ImageNet, run:
+`num_epochs`  configures the epochs for sampling
+`batch_size`  configures the size for a batch sampling
+`input_size`  configures the input dim
+`optimizer`  configures the optimizer for training RNN
+`hidden_size`  configures the hidden dim
+`embedding_size`  configures the embedding dim
+`learning_rate1`  configures the learning rate for training RNN
+`risk_seeking`  configures using risk seeking policy gradient or not
+`risk_factor`  configures the risk factor
+`entropy_weight`  configures the entropy weight
+`reward_type`  configures the error type for computing reward. Default: mse
 
-```eval
-python eval.py --model-file mymodel.pth --benchmark imagenet
-```
+#### parameters for symbolic network training
 
->📋  Describe how to evaluate the trained models on benchmarks reported in the paper, give commands that produce the results (section below).
+`learning_rate2` configures the learning rate
+`reg_weight`  configures the regularizaiton weight
+`threshold`  configures the prunning threshold
+`trials`  configures the training trials
+`n_epochs1`  configures the epochs for the first training stage
+`n_epochs2`  configures the epochs for the second training stage
+`summary_step`  configures to summary for every n training steps
+`clip_grad`  configures using adaptive gradient clipping or not
+`max_norm` configures the norm threshold for gradient clipping
+`window_size`  configures the window size for adaptive gradient clipping
+`refine_constants`  confifures refining constants or not
+`n_restarts`  configures the number of restarts for BFGS optimization
+`add_bias`  configures adding bias or not
+`verbose`  configures printing training process or not
+`use_gpu`  configures using cuda or not
+`plot_reward`  configures plotting reward curve or not
 
-## Pre-trained Models
+#### parameters for genearting dataset
 
-You can download pretrained models here:
+`N_TRAIN`  configures the size of training dataset
+`N_VAL`  configures the size of validation dataset
+`NOISE` = 0  configures the standard deviation of noise for training dataset
+`DOMAIN`  configures the domain of dataset - range from which we sample x
 
-- [My awesome model](https://drive.google.com/mymodel.pth) trained on ImageNet using parameters x,y,z. 
+`N_TEST`  configures the size of test dataset
+`DOMAIN_TEST`  configures the domain of test dataset
 
->📋  Give a link to where/how the pretrained models can be downloaded and how they were trained (if applicable).  Alternatively you can have an additional column in your results table with a link to the models.
+#### other parameters
+
+`results_dir` configures the save path for all results
+
+### Symbolic Regression
+
+TODO
 
 ## Results
 
@@ -64,8 +99,3 @@ Our approach achieves the state-of-the-art  performance on **Standard benchmarks
 ![Fitting accuracy](img/Fitting_accuracy.png)
 
 **See the [paper](https://openreview.net/forum?id=pTmrk4XPFx) for more experimental results.**
-
-
-## Contributing
-
->📋  Pick a licence and describe how to contribute to your code repository. 
