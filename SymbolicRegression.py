@@ -50,7 +50,7 @@ class TimedFun:
         return self.fun_value
 
 
-class PolicyGradient:
+class SymboliRegression:
     def __init__(self, config, func=None, func_name=None, data_path=None):
         """
         Args:
@@ -541,8 +541,8 @@ class PolicyGradient:
                     mse_loss = criterion(outputs, target)
 
                     reg_loss = regularization(net.get_weights_tensor())
-                    # loss = mse_loss + self.config.reg_weight * reg_loss
-                    loss = mse_loss
+                    loss = mse_loss + self.config.reg_weight * reg_loss
+                    # loss = mse_loss
                     loss.backward()
 
                     if self.clip_grad:
@@ -673,15 +673,15 @@ class PolicyGradient:
         return error_expr_sorted[0]
 
     def load_data(self, path):
-        '''Need to be implemented for specfic file'''
+        '''Need to be implemented for the specfic data file'''
         pass
 
 
 if __name__ == "__main__":
     config = Params()
-    policy_gradient = PolicyGradient(config=config, func="x_1 ** 2 + x_2 ** 2", func_name="x_1**2+x_2**2")
-    eq, R2, error, relative_error = policy_gradient.solve_environment()
-    print('eq: ', eq)
+    SR = SymboliRegression(config=config, func="x_1 + x_2", func_name="x_1+x_2")
+    eq, R2, error, relative_error = SR.solve_environment()
+    print('Expression: ', eq)
     print('R2: ', R2)
     print('error: ', error)
     print('relative_error: ', relative_error)

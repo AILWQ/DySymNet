@@ -7,7 +7,7 @@ class Params:
                    Sin(),
                    Cos(),
                    # Tan(),
-                   Exp(),
+                   # Exp(),
                    # Log(),
                    # Sqrt(),
                    Square(),
@@ -26,7 +26,7 @@ class Params:
     # symbolic network training parameters
     learning_rate2 = 1e-2
     reg_weight = 5e-3
-    threshold = 0.01
+    threshold = 0.05
     trials = 1  # training trials of symbolic network
     n_epochs1 = 10001
     n_epochs2 = 10001

@@ -25,7 +25,7 @@ The packages have been tested on Linux.
 
 ### Configure runs
 
-The main running script is `policy_gradient.py` and it relies on configuring runs via `params.py`. The `params.py` includes various hyperparameters of the controller RNN and the symbolic network. You can configure the following hyperparameters as required:
+The main running script is `SymbolicRegression.py` and it relies on configuring runs via `params.py`. The `params.py` includes various hyperparameters of the controller RNN and the symbolic network. You can configure the following hyperparameters as required:
 
 #### parameters for symbolic network structure
 
@@ -81,7 +81,66 @@ The main running script is `policy_gradient.py` and it relies on configuring run
 
 ### Symbolic Regression
 
-TODO
+We provide two ways to perform symbolic regression tasks.
+
+#### Option1: Input ground truth expression
+
+When you want to discover an expression for which the ground truth is known, for example to test a standard benchmark, you can edit the script `SymbolicRegression.py`  as follows:
+
+```python
+# SymbolicRegression.py
+params = Params()  # configuration for a specific task
+ground_truth_eq = "x_1 + x_2"  # variable names should be written as x_i, where i>=1.
+eq_name = "x_1+x_2"
+SR = SymbolicRegression(config=params, func=ground_truth_eq, fun_name=eq_name)  # A new folder named "func_name" will be created to store the result files.
+eq, R2, error, relative_error = SR.solve_environment()  # return results
+```
+
+In this way, the function `generate_data` is used to automatically generate the corresponding data set $(X, y)$ for inference, instead of you generating the data yourself.
+
+Then, you can run `SymbolicRegression.py` directly, or you can run it in the terminal as follows:
+
+```python
+python SymbolicRegression.py
+```
+
+After running this script, the results will be stored in path `./results/test/func_name`.
+
+#### Option2: Input the data file
+
+When you only have observed data and do not know the ground truth, you can perform symbolic regression by entering the path to the data file:
+
+```python
+# SymbolicRegression.py
+params = Params()  # configuration for a specific task
+data_path = 'path/to/your/data'
+SR = SymbolicRegression(config=params, func_name='blackbox', data_path=data_path)  # you can rename the func_name as any other you want.
+eq, R2, error, relative_error = SR.solve_environment()  # return results
+```
+
+**Note that** you should implement the `load_data(self, data)` funcion according to the data file. The shape  of returned $X$ should be $(num_points, x_dim)$, and $y$ should be $(num_points, 1)$.
+
+Then, you can run `SymbolicRegression.py` directly, or you can run it in the terminal as follows:
+
+```python
+python SymbolicRegression.py
+```
+
+After running this script, the results will be stored in path `./results/test/blackbox`.
+
+#### Output
+
+Once the script stops early or finishes running, you will get the following output:
+
+```
+Expression: x_1 + x_2
+R2: 1.0
+error: 4.3591795754679974e-13
+relative_error:  2.036015757767018e-06
+log(1 + MSE):  4.3587355946774144e-13
+```
+
+
 
 ## Results
 
