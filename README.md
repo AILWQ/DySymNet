@@ -118,7 +118,7 @@ SR = SymbolicRegression(config=params, func_name='blackbox', data_path=data_path
 eq, R2, error, relative_error = SR.solve_environment()  # return results
 ```
 
-**Note that** you should implement the `load_data(self, data)` funcion according to the data file. The shape  of returned $X$ should be $(num\_points, x\_dim)$, and $y$ should be $(num_points, 1)$.
+**Note that** you should implement the `load_data(self, data)` funcion according to the data file. The shape  of returned $X$ should be (num_points, x_dim), and $y$ should be (num_points, 1).
 
 Then, you can run `SymbolicRegression.py` directly, or you can run it in the terminal as follows:
 
