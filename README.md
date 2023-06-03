@@ -106,7 +106,7 @@ python SymbolicRegression.py
 
 After running this script, the results will be stored in path `./results/test/func_name`.
 
-#### Option2: Input the data file
+#### Option2: Load the data file
 
 When you only have observed data and do not know the ground truth, you can perform symbolic regression by entering the path to the data file:
 
