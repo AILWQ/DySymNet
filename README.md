@@ -1,16 +1,20 @@
-## A Neural-Guided Dynamic Symbolic Network for Exploring Mathematical Expressions from Data
+## DySymNet
 
 ![overview](img/Overview.png)
 
-This repository is the official implementation of [***A Neural-Guided Dynamic Symbolic Network for Exploring Mathematical Expressions from Data***](https://openreview.net/forum?id=pTmrk4XPFx) submitted to NeurIPS'23.
+This repository contains the official Pytorch implementation for the paper [***A Neural-Guided Dynamic Symbolic Network for Exploring Mathematical Expressions from Data***](https://openreview.net/forum?id=pTmrk4XPFx) [ICML 2024].
 
-## Highlights
+[![Paper](https://img.shields.io/badge/Paper-📖-blue?)](https://openreview.net/pdf?id=IejxxE9DO2)![GitHub Repo stars](https://img.shields.io/github/stars/AILWQ/DySymNet?style=social)[![Paper](https://img.shields.io/badge/arXiv-2309.13705-b31b1b)](https://arxiv.org/abs/2309.13705)![visitor badge](https://visitor-badge.laobi.icu/badge?page_id=AILWQ.DySymNet&left_color=red&right_color=green&left_text=Hello%20Visitors)
+
+
+
+## 🔥 Highlights
 
 - Our proposed ***<span style="font-variant: small-caps;">DySymNet</span>*** is a new search paradigm for symbolic regression (SR) that searches the symbolic network with various architectures instead of searching expressions in the large functional space.
 - ***<span style="font-variant: small-caps;">DySymNet</span>*** possesses promising capabilities in solving high-dimensional problems and optimizing coefficients, which are lacking in current SR methods.
 - Extensive numerical experiments demonstrated that ***<span style="font-variant: small-caps;">DySymNet</span>*** outperforms state-of-the-art baselines across various SR standard benchmark datasets and the well-known SRBench with more variables.
 
-## Requirements
+## 📦 Requirements
 
 Install the conda environment and packages:
 
@@ -21,7 +25,7 @@ conda activate dysymnet
 
 The packages have been tested on Linux.
 
-## Getting started
+## 📋 Getting started
 
 ### Configure runs
 
@@ -66,20 +70,20 @@ The main running script is `SymbolicRegression.py` and it relies on configuring 
 - `use_gpu`  configures using cuda or not
 - `plot_reward`  configures plotting reward curve or not
 
-#### parameters for genearting dataset
+#### parameters for genearting input data
 
 - `N_TRAIN`  configures the size of training dataset
 - `N_VAL`  configures the size of validation dataset
 - `NOISE` = 0  configures the standard deviation of noise for training dataset
-- `DOMAIN`  configures the domain of dataset - range from which we sample x
+- `DOMAIN`  configures the domain of input data
 - `N_TEST`  configures the size of test dataset
 - `DOMAIN_TEST`  configures the domain of test dataset
 
-#### other parameters
+#### Additional parameters
 
 `results_dir` configures the save path for all results
 
-### Symbolic Regression
+### 🤖 Symbolic Regression
 
 We provide two ways to perform symbolic regression tasks.
 
@@ -140,20 +144,16 @@ relative_error:  2.036015757767018e-06
 log(1 + MSE):  4.3587355946774144e-13
 ```
 
+## 🔗 Citing this work
 
+If you find our work and this codebase helpful, please consider starring this repo 🌟 and cite:
 
-## Results
+```bibtex
+@article{li2023neural,
+  title={A Neural-Guided Dynamic Symbolic Network for Exploring Mathematical Expressions from Data},
+  author={Li, Wenqiang and Li, Weijun and Yu, Lina and Wu, Min and Liu, Jingyi and Li, Yanjie},
+  journal={arXiv preprint arXiv:2309.13705},
+  year={2023}
+}
+```
 
-Our approach achieves the state-of-the-art  performance on **Standard benchmarks** and **SRBench benchmark**.
-
-### Pareto plot on SRBench benchmark
-
-**Our proposed *<span style="font-variant: small-caps;">DySymNet</span>* outperforms previous DL-based and GP-based SR methods in terms of fitting accuracy while maintaining a relatively small symbolic model size.** Pareto plot comparing the average test performance and model size of our method with baselines provided by the SRBench benchmark, both on *Feynman* dataset (left) and *Black-box* dataset (right).
-
-![pareto](img/Pareto_DySymNet.png)
-
-### Fitting accuracy comparison
-
-![Fitting accuracy](img/Fitting_accuracy.png)
-
-**See the [paper](https://openreview.net/forum?id=pTmrk4XPFx) for more experimental results.**
