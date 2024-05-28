@@ -4,7 +4,10 @@
 
 This repository contains the official Pytorch implementation for the paper [***A Neural-Guided Dynamic Symbolic Network for Exploring Mathematical Expressions from Data***](https://openreview.net/forum?id=pTmrk4XPFx) [ICML 2024].
 
-[![Paper](https://img.shields.io/badge/Paper-📖-blue?)](https://openreview.net/pdf?id=IejxxE9DO2) ![GitHub Repo stars](https://img.shields.io/github/stars/AILWQ/DySymNet?style=social)[![Paper](https://img.shields.io/badge/arXiv-2309.13705-b31b1b)](https://arxiv.org/abs/2309.13705)![visitor badge](https://visitor-badge.laobi.icu/badge?page_id=AILWQ.DySymNet&left_color=red&right_color=green&left_text=Hello%20Visitors)
+[![Paper](https://img.shields.io/badge/Paper-📖-blue?)](https://openreview.net/pdf?id=IejxxE9DO2)
+![GitHub Repo stars](https://img.shields.io/github/stars/AILWQ/DySymNet?style=social)
+[![Paper](https://img.shields.io/badge/arXiv-2309.13705-b31b1b)](https://arxiv.org/abs/2309.13705)
+![visitor badge](https://visitor-badge.laobi.icu/badge?page_id=AILWQ.DySymNet&left_color=red&right_color=green&left_text=Hello%20Visitors)
 
 
 
