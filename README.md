@@ -136,7 +136,7 @@ SR = SymbolicRegression(config=params, func_name='func_name', data_path=data_pat
 eq, R2, error, relative_error = SR.solve_environment()  # return results
 ```
 
-**Note:** the data file should contains ($X_dim + 1$) colums, which $X_dim$ is the number of independent variable and the last colum is the corresponding $y$ values.
+**Note:** the data file should contains ($X\_{dim} + 1$) colums, which $X\_{dim}$ is the number of independent variable and the last colum is the corresponding $y$ values.
 
 Then, you can run `SymbolicRegression.py` directly, or you can run it in the terminal as follows:
 
@@ -144,7 +144,7 @@ Then, you can run `SymbolicRegression.py` directly, or you can run it in the ter
 python SymbolicRegression.py
 ```
 
-After running this script, the results will be stored in path `./results/test/blackbox`.
+After running this script, the results will be stored in path `./results/test/func_name`.
 
 #### Output
 
