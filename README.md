@@ -13,9 +13,9 @@ This repository contains the official Pytorch implementation for the paper [***A
 
 ## 🔥 Highlights
 
-- Our proposed ***<span style="font-variant: small-caps;">DySymNet</span>*** is a new search paradigm for symbolic regression (SR) that searches the symbolic network with various architectures instead of searching expressions in the large functional space.
+- ***<span style="font-variant: small-caps;">DySymNet</span>*** is a new search paradigm for symbolic regression (SR) that searches the symbolic network with various architectures instead of searching expressions in the large functional space.
 - ***<span style="font-variant: small-caps;">DySymNet</span>*** possesses promising capabilities in solving high-dimensional problems and optimizing coefficients, which are lacking in current SR methods.
-- Extensive numerical experiments demonstrated that ***<span style="font-variant: small-caps;">DySymNet</span>*** outperforms state-of-the-art baselines across various SR standard benchmark datasets and the well-known SRBench with more variables.
+- ***<span style="font-variant: small-caps;">DySymNet</span>*** outperforms state-of-the-art baselines across various SR standard benchmark datasets and the well-known SRBench with more variables.
 
 ## 📦 Requirements
 
@@ -30,63 +30,74 @@ The packages have been tested on Linux.
 
 ## 📋 Getting started
 
-### Configure runs
-
 The main running script is `SymbolicRegression.py` and it relies on configuring runs via `params.py`. The `params.py` includes various hyperparameters of the controller RNN and the symbolic network. You can configure the following hyperparameters as required:
 
 #### parameters for symbolic network structure
 
-- `funcs_avail`  configures the operator library and It's part of the search space. You can add the additional operators in the `functions.py` by referring to existing operators and place them inside `funcs_avail`  if you want to use them.
-- `n_layers` configures the number library of symbolic network layers. It's part of the search space.
-- `num_func_layer` configure number library of operators in each layer. It's part of the search space.
+|    Parameters    |                         Description                          | **Example Values** |
+| :--------------: | :----------------------------------------------------------: | :----------------: |
+|  `funcs_avail`   |                       Operator library                       |  See `params.py`   |
+|    `n_layers`    |               Range of symbolic network layers               |    [2, 3, 4, 5]    |
+| `num_func_layer` | Range of the number of neurons per layer of a symbolic network |  [2, 3, 4, 5, 6]   |
+
+Note: You can add the additional operators in the `functions.py` by referring to existing operators and place them inside `funcs_avail`  if you want to use them.
 
 #### parameters for controller RNN
 
-- `num_epochs`  configures the epochs for sampling
-- `batch_size`  configures the size for a batch sampling
-- `input_size`  configures the input dim
-- `optimizer`  configures the optimizer for training RNN
-- `hidden_size`  configures the hidden dim
-- `embedding_size`  configures the embedding dim
-- `learning_rate1`  configures the learning rate for training RNN
-- `risk_seeking`  configures using risk seeking policy gradient or not
-- `risk_factor`  configures the risk factor
-- `entropy_weight`  configures the entropy weight
-- `reward_type`  configures the error type for computing reward. Default: mse
+|    Parameters    |                Description                | **Example Values** |
+| :--------------: | :---------------------------------------: | :----------------: |
+|   `num_epochs`   |            epochs for sampling            |        500         |
+|   `batch_size`   |         Size for a batch sampling         |         10         |
+|   `optimizer`    |        Optimizer for training RNN         |        Adam        |
+|  `hidden_size`   |         Hidden dim. of RNN layer          |         32         |
+| `embedding_size` |              Embedding dim.               |         16         |
+| `learning_rate1` |      Learning rate for training RNN       |       0.0006       |
+|  `risk_seeking`  | using risk seeking policy gradient or not |        True        |
+|  `risk_factor`   |                Risk factor                |        0.5         |
+| `entropy_weight` |              Entropy weight               |       0.005        |
+|  `reward_type`   |      Loss type for computing reward       |        mse         |
+
+
 
 #### parameters for symbolic network training
 
-- `learning_rate2` configures the learning rate
-- `reg_weight`  configures the regularizaiton weight
-- `threshold`  configures the prunning threshold
-- `trials`  configures the training trials
-- `n_epochs1`  configures the epochs for the first training stage
-- `n_epochs2`  configures the epochs for the second training stage
-- `summary_step`  configures to summary for every n training steps
-- `clip_grad`  configures using adaptive gradient clipping or not
-- `max_norm` configures the norm threshold for gradient clipping
-- `window_size`  configures the window size for adaptive gradient clipping
-- `refine_constants`  confifures refining constants or not
-- `n_restarts`  configures the number of restarts for BFGS optimization
-- `add_bias`  configures adding bias or not
-- `verbose`  configures printing training process or not
-- `use_gpu`  configures using cuda or not
-- `plot_reward`  configures plotting reward curve or not
+|     Parameters     |                  Description                  | **Example Values** |
+| :----------------: | :-------------------------------------------: | :----------------: |
+|  `learning_rate2`  |  Learning rate for training symbolic network  |        0.01        |
+|    `reg_weight`    |             Regularizaiton weight             |        5e-3        |
+|    `threshold`     |              Prunning threshold               |        0.05        |
+|      `trials`      | Training trials for training symbolic network |         1          |
+|    `n_epochs1`     |      Epochs for the first training stage      |       10001        |
+|    `n_epochs2`     |     Epochs for the second training stage      |       10001        |
+|   `summary_step`   |     Summary for every `n` training steps      |        1000        |
+|    `clip_grad`     |    Using adaptive gradient clipping or not    |        True        |
+|     `max_norm`     |     Norm threshold for gradient clipping      |        1.0         |
+|   `window_size`    |  Window size for adaptive gradient clipping   |         50         |
+| `refine_constants` |           Refining constants or not           |        True        |
+|    `n_restarts`    |   Number of restarts for BFGS optimization    |         1          |
+|     `add_bias`     |              adding bias or not               |       False        |
+|     `verbose`      |         Print training process or not         |        True        |
+|     `use_gpu`      |               Using cuda or not               |       False        |
+|   `plot_reward`    |           Plot reward curve or not            |       False        |
+
+**Note:** `threshold` controls the complexity of the final expression, and is a trade-off between complexity and precision, which you can customise according to your actual requirements.
 
 #### parameters for genearting input data
 
-- `N_TRAIN`  configures the size of training dataset
-- `N_VAL`  configures the size of validation dataset
-- `NOISE` = 0  configures the standard deviation of noise for training dataset
-- `DOMAIN`  configures the domain of input data
-- `N_TEST`  configures the size of test dataset
-- `DOMAIN_TEST`  configures the domain of test dataset
+|  Parameters   |                Description                 | **Example Values** |
+| :-----------: | :----------------------------------------: | :----------------: |
+|   `N_TRAIN`   |             Size of input data             |        100         |
+|    `N_VAL`    |         Size of validation dataset         |        100         |
+|    `NOISE`    | Standard deviation of noise for input data |         0          |
+|   `DOMAIN`    |            Domain of input data            |      (-1, 1)       |
+|   `N_TEST`    |            Size of test dataset            |        100         |
+| `DOMAIN_TEST` |           Domain of test dataset           |      (-1, 1)       |
 
 #### Additional parameters
 
 `results_dir` configures the save path for all results
 
-### 🤖 Symbolic Regression
+## 🤖 Symbolic Regression
 
 We provide two ways to perform symbolic regression tasks.
 
@@ -115,17 +126,17 @@ After running this script, the results will be stored in path `./results/test/fu
 
 #### Option2: Load the data file
 
-When you only have observed data and do not know the ground truth, you can perform symbolic regression by entering the path to the data file:
+When you only have observed data and do not know the ground truth, you can perform symbolic regression by entering the path to the csv data file:
 
 ```python
 # SymbolicRegression.py
 params = Params()  # configuration for a specific task
-data_path = 'path/to/your/data'
-SR = SymbolicRegression(config=params, func_name='blackbox', data_path=data_path)  # you can rename the func_name as any other you want.
+data_path = 'path/to/your/data'  # data file should be in csv format
+SR = SymbolicRegression(config=params, func_name='func_name', data_path=data_path)  # you can rename the func_name as any other you want.
 eq, R2, error, relative_error = SR.solve_environment()  # return results
 ```
 
-**Note that** you should implement the `load_data(self, data)` funcion according to the data file. The shape  of returned $X$ should be (num_points, x_dim), and $y$ should be (num_points, 1).
+**Note:** the data file should contains ($X_dim + 1$) colums, which $X_dim$ is the number of independent variable and the last colum is the corresponding $y$ values.
 
 Then, you can run `SymbolicRegression.py` directly, or you can run it in the terminal as follows:
 

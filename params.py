@@ -58,7 +58,7 @@ class Params:
     reward_type = "mse"  # mse, nrmse
 
     # dataset parameters
-    N_TRAIN = 10  # Size of training dataset
+    N_TRAIN = 100  # Size of training dataset
     N_VAL = 100  # Size of validation dataset
     NOISE = 0  # Standard deviation of noise for training dataset
     DOMAIN = (-1, 1)  # Domain of dataset - range from which we sample x. Default (-1, 1)

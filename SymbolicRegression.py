@@ -6,6 +6,7 @@ from inspect import signature
 import os
 import torch
 import sympy as sp
+import pandas as pd
 from scipy.optimize import minimize
 from functions import *
 import functions
@@ -523,10 +524,6 @@ class SymboliRegression:
                 # adaptive learning rate
                 lmbda = lambda epoch: 0.1
                 scheduler = optim.lr_scheduler.MultiplicativeLR(optimizer, lr_lambda=lmbda)
-                # for param_group in optimizer.param_groups:
-                #     print("Learning rate: %f" % param_group['lr'])
-
-                # t0 = time.time()
 
                 if self.clip_grad:
                     que = collections.deque()
@@ -642,8 +639,6 @@ class SymboliRegression:
                         if np.isnan(loss_val) or loss_val > 1000:  # If loss goes to NaN, restart training
                             break
 
-                # t1 = time.time()
-
             if restart_flag:
                 # self.play_episodes()
                 retrain_num += 1
@@ -673,8 +668,18 @@ class SymboliRegression:
         return error_expr_sorted[0]
 
     def load_data(self, path):
-        '''Need to be implemented for the specfic data file'''
-        pass
+        data = pd.read_csv(path)
+        
+        if data.shape[1] < 2:
+            raise ValueError('CSV file must contain at least 2 columns.')
+        
+        x_data = data.iloc[:, :-1]
+        y_data = data.iloc[:, -1:]
+        
+        X = torch.tensor(x_data.values, dtype=torch.float32)
+        y = torch.tensor(y_data.values, dtype=torch.float32)
+            
+        return X, y
 
 
 if __name__ == "__main__":
