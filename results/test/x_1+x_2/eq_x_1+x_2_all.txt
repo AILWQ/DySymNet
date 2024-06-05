@@ -1,0 +1,7 @@
+
+2024-06-05 10:22:24		x_1+x_2
+mse		Reward		R2		Expression		num_layers		num_funcs_layer		funcs_per_layer
+0.00000000		0.00000012		1.00000000		1.00000000		1.00000012636202*x_1 + 1.0000000915387*x_2		2		4		{1: ['+', '-', '+', 'pow2'], 2: ['id', 'pow2', 'cos', '*']}
+
+2024-06-05 15:07:13		x_1+x_2
+mse		Reward		R2		Expression		num_layers		num_funcs_layer		funcs_per_layer

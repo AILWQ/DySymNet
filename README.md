@@ -131,8 +131,8 @@ When you only have observed data and do not know the ground truth, you can perfo
 ```python
 # SymbolicRegression.py
 params = Params()  # configuration for a specific task
-data_path = 'path/to/your/data'  # data file should be in csv format
-SR = SymbolicRegression(config=params, func_name='func_name', data_path=data_path)  # you can rename the func_name as any other you want.
+data_path = './data/Nguyen-1.csv'  # data file should be in csv format
+SR = SymbolicRegression(config=params, func_name='Nguyen-1', data_path=data_path)  # you can rename the func_name as any other you want.
 eq, R2, error, relative_error = SR.solve_environment()  # return results
 ```
 

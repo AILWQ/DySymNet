@@ -1,28 +1,26 @@
 import json
 import os
-import pickle
 import time
-from inspect import signature
 import os
 import torch
 import sympy as sp
 import pandas as pd
 from scipy.optimize import minimize
-from functions import *
-import functions
+from scripts.functions import *
+import scripts.functions as functions
 import collections
 import numpy as np
 import matplotlib.pyplot as plt
-from sympy import parse_expr, symbols, Float
+from sympy import symbols, Float
 from torch import nn, optim
-from controller import Agent
+from scripts.controller import Agent
 import torch.nn.functional as F
-import pretty_print
-from regularization import L12Smooth
-from symbolic_network import SymbolicNet
+from scripts import pretty_print
+from scripts.regularization import L12Smooth
+from scripts.symbolic_network import SymbolicNet
 from sklearn.metrics import r2_score
-from params import Params
-from utils import nrmse, R_Square, MSE, Relative_Error
+from scripts.params import Params
+from scripts.utils import nrmse, R_Square, MSE, Relative_Error
 
 
 def generate_data(func, N, range_min, range_max):
@@ -122,7 +120,7 @@ class SymboliRegression:
         self.dtype = self.X.dtype  # obtain the data type, which determines the parameter type of the model
 
         if isinstance(self.n_layers, list) or isinstance(self.num_func_layer, list):
-            print('*' * 16, 'Sampling...', '*' * 16)
+            print('*' * 25, 'Start Sampling...', '*' * 25 + '\n')
             self.auto = True
 
         self.agent = Agent(auto=self.auto, input_size=self.input_size, hidden_size=self.hidden_size,
@@ -683,11 +681,23 @@ class SymboliRegression:
 
 
 if __name__ == "__main__":
+    # Configure the parameters
     config = Params()
+
+    # Example 1: Input ground truth expression
     SR = SymboliRegression(config=config, func="x_1 + x_2", func_name="x_1+x_2")
     eq, R2, error, relative_error = SR.solve_environment()
     print('Expression: ', eq)
     print('R2: ', R2)
     print('error: ', error)
     print('relative_error: ', relative_error)
-    print('log(1 + MSE): ', np.log(1 + error))  # Grammar VAE
+    print('log(1 + MSE): ', np.log(1 + error))
+
+    # Example 2: Input data path of csv file
+    # SR = SymboliRegression(config=config, func_name="Nguyen-1", data_path="./data/Nguyen-1.csv")
+    # eq, R2, error, relative_error = SR.solve_environment()
+    # print('Expression: ', eq)
+    # print('R2: ', R2)
+    # print('error: ', error)
+    # print('relative_error: ', relative_error)
+    # print('log(1 + MSE): ', np.log(1 + error))
