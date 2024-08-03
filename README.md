@@ -161,12 +161,12 @@ log(1 + MSE):  4.3587355946774144e-13
 If you find our work and this codebase helpful, please consider starring this repo 🌟 and cite:
 
 ```bibtex
-@article{li2023neural,
-  title={A Neural-Guided Dynamic Symbolic Network for Exploring Mathematical Expressions from Data},
-  author={Li, Wenqiang and Li, Weijun and Yu, Lina and Wu, Min and Liu, Jingyi and Li, Yanjie},
-  journal={arXiv preprint arXiv:2309.13705},
-  year={2023}
+@inproceedings{
+li2024a,
+title={A Neural-Guided Dynamic Symbolic Network for Exploring Mathematical Expressions from Data},
+author={Wenqiang Li and Weijun Li and Lina Yu and Min Wu and Linjun Sun and Jingyi Liu and Yanjie Li and Shu Wei and Deng Yusong and Meilan Hao},
+booktitle={Forty-first International Conference on Machine Learning},
+year={2024},
+url={https://openreview.net/forum?id=IejxxE9DO2}
 }
 ```
-
-We'll update the ICML reference later!
