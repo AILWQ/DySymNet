@@ -1,5 +1,7 @@
 ## DySymNet
 
+![ICML-logo](img/ICML-logo.svg)
+
 ![overview](img/Overview.png)
 
 This repository contains the official Pytorch implementation for the paper [***A Neural-Guided Dynamic Symbolic Network for Exploring Mathematical Expressions from Data***](https://openreview.net/forum?id=pTmrk4XPFx) [ICML 2024].
