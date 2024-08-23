@@ -1,6 +1,8 @@
 ## DySymNet
 
-![ICML-logo](img/ICML-logo.svg)
+<div align="center">
+  <img src="img/ICML-logo.svg" alt="ICML-logo">
+</div>
 
 ![overview](img/Overview.png)
 
