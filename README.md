@@ -6,7 +6,7 @@
 
 ![overview](img/Overview.png)
 
-This repository contains the official Pytorch implementation for the paper [***A Neural-Guided Dynamic Symbolic Network for Exploring Mathematical Expressions from Data***](https://openreview.net/forum?id=pTmrk4XPFx) [ICML 2024].
+This repository contains the official Pytorch implementation for the paper [***A Neural-Guided Dynamic Symbolic Network for Exploring Mathematical Expressions from Data***](https://openreview.net/forum?id=pTmrk4XPFx) accepted by ICML'24.
 
 [![Paper](https://img.shields.io/badge/Paper-📖-blue?)](https://openreview.net/pdf?id=IejxxE9DO2)
 [![Paper](https://img.shields.io/badge/arXiv-2309.13705-b31b1b)](https://arxiv.org/abs/2309.13705)
