@@ -1,3 +1,20 @@
+Metadata-Version: 2.1
+Name: DySymNet
+Version: 0.2.0
+Summary: This package contains the official Pytorch implementation for the paper "A Neural-Guided Dynamic Symbolic Network for Exploring Mathematical Expressions from Data" accepted by ICML'24.
+Home-page: https://github.com/AILWQ/DySymNet
+Author: Wenqiang Li
+Author-email: liwenqiang2021@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
 ## DySymNet
 
 <div align="center">
@@ -13,58 +30,24 @@ This repository contains the official Pytorch implementation for the paper [***A
 ![visitor badge](https://visitor-badge.laobi.icu/badge?page_id=AILWQ.DySymNet&left_color=red&right_color=green&left_text=Hello%20Visitors)
 ![GitHub Repo stars](https://img.shields.io/github/stars/AILWQ/DySymNet?style=social)
 
-## 🔥 News
-[2024/10/12] ***Now DySymNet can be installed via pip install. You only need 3 lines of code to start exploring expressions!***
-
-
-## 🚀 Highlights
+## 🔥 Highlights
 
 - ***<span style="font-variant: small-caps;">DySymNet</span>*** is a new search paradigm for symbolic regression (SR) that searches the symbolic network with various architectures instead of searching expressions in the large functional space.
 - ***<span style="font-variant: small-caps;">DySymNet</span>*** possesses promising capabilities in solving high-dimensional problems and optimizing coefficients, which are lacking in current SR methods.
 - ***<span style="font-variant: small-caps;">DySymNet</span>*** outperforms state-of-the-art baselines across various SR standard benchmark datasets and the well-known SRBench with more variables.
 
-## 📦 Install
+## 📦 Requirements
 
-Create the conda environment and install ***<span style="font-variant: small-caps;">DySymNet</span>*** :
+Install the conda environment and packages:
 
 ```setup
-conda create -n dysymnet python=3.8
+conda env create -f environment.yml
 conda activate dysymnet
-pip install -i https://test.pypi.org/simple/ DySymNet
 ```
 
-## 🤗 Quick start
+The packages have been tested on Linux.
 
-You can create and run the following script in any directory:
-
-```python
-import numpy as np
-from DySymNet import SymbolicRegression
-from DySymNet.scripts.params import Params
-from DySymNet.scripts.functions import *
-
-# You can customize some hyperparameters according to parameter configuration
-config = Params()
-
-# such as operators 
-funcs = [Identity(), Sin(), Cos(), Square(), Plus(), Sub(), Product()]
-config.funcs_avail = funcs
-
-# Example 1: Input ground truth expression
-SR = SymbolicRegression.SymboliRegression(config=config, func="x_1**3 + x_1**2 + x_1", func_name="Nguyen-1")
-eq, R2, error, relative_error = SR.solve_environment()
-print('Expression: ', eq)
-print('R2: ', R2)
-print('error: ', error)
-print('relative_error: ', relative_error)
-print('log(1 + MSE): ', np.log(1 + error))
-```
-
-Then you can get a folder named as "results" in the current directory, which contains subfolders named func_name that record the logs of the script running process.
-
-
-
-## ⚙️ Parameter configuration
+## 📋 Getting started
 
 The main running script is `SymbolicRegression.py` and it relies on configuring runs via `params.py`. The `params.py` includes various hyperparameters of the controller RNN and the symbolic network. You can configure the following hyperparameters as required:
 
@@ -194,9 +177,9 @@ relative_error:  2.036015757767018e-06
 log(1 + MSE):  4.3587355946774144e-13
 ```
 
-## 🌟 Citing this work
+## 🔗 Citing this work
 
-If you find our work and this codebase helpful, please consider starring this repo and cite:
+If you find our work and this codebase helpful, please consider starring this repo 🌟 and cite:
 
 ```bibtex
 @inproceedings{
@@ -208,3 +191,5 @@ year={2024},
 url={https://openreview.net/forum?id=IejxxE9DO2}
 }
 ```
+
+

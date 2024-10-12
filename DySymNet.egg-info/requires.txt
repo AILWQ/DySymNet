@@ -1,0 +1,9 @@
+scikit-learn==1.5.2
+numpy==1.26.4
+sympy==1.13.3
+torch==2.2.2
+matplotlib==3.9.2
+tqdm==4.66.5
+pandas==2.2.3
+pip==24.2
+scipy==1.13.1

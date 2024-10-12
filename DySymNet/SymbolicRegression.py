@@ -6,21 +6,21 @@ import torch
 import sympy as sp
 import pandas as pd
 from scipy.optimize import minimize
-from scripts.functions import *
-import scripts.functions as functions
+from .scripts.functions import *
+from .scripts import functions as functions
 import collections
 import numpy as np
 import matplotlib.pyplot as plt
 from sympy import symbols, Float
 from torch import nn, optim
-from scripts.controller import Agent
+from .scripts.controller import Agent
 import torch.nn.functional as F
-from scripts import pretty_print
-from scripts.regularization import L12Smooth
-from scripts.symbolic_network import SymbolicNet
+from .scripts import pretty_print
+from .scripts.regularization import L12Smooth
+from .scripts.symbolic_network import SymbolicNet
 from sklearn.metrics import r2_score
-from scripts.params import Params
-from scripts.utils import nrmse, R_Square, MSE, Relative_Error
+from .scripts.params import Params
+from .scripts.utils import nrmse, R_Square, MSE, Relative_Error
 
 
 def generate_data(func, N, range_min, range_max):
