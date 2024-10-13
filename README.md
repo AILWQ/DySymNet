@@ -14,7 +14,7 @@ This repository contains the official Pytorch implementation for the paper [***A
 ![GitHub Repo stars](https://img.shields.io/github/stars/AILWQ/DySymNet?style=social)
 
 ## 🔥 News
-[2024/10/12] ***Now DySymNet can be installed via '<u>pip install DySymNet</u>'. You only need 3 commands to start exploring expressions!***
+[2024/10/12] ***Now DySymNet can be installed via '<u>pip install DySymNet</u>'. You only need 1 command to start exploring expressions!***
 
 
 ## 🚀 Highlights
