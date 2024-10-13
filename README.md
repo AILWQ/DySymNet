@@ -14,7 +14,7 @@ This repository contains the official Pytorch implementation for the paper [***A
 ![GitHub Repo stars](https://img.shields.io/github/stars/AILWQ/DySymNet?style=social)
 
 ## 🔥 News
-[2024/10/12] ***Now DySymNet can be installed via pip install. You only need 3 commands to start exploring expressions!***
+[2024/10/12] ***Now DySymNet can be installed via '<u>pip install DySymNet</u>'. You only need 3 commands to start exploring expressions!***
 
 
 ## 🚀 Highlights
@@ -30,7 +30,7 @@ Create the conda environment and install ***<span style="font-variant: small-cap
 ```setup
 conda create -n dysymnet python=3.8
 conda activate dysymnet
-pip install -i https://test.pypi.org/simple/ DySymNet
+pip install DySymNet
 ```
 
 ## 🤗 Quick start
@@ -38,6 +38,7 @@ pip install -i https://test.pypi.org/simple/ DySymNet
 You can create and run the following script in any directory:
 
 ```python
+# Demo.py
 import numpy as np
 from DySymNet import SymbolicRegression
 from DySymNet.scripts.params import Params
