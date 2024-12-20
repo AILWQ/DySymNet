@@ -25,11 +25,9 @@ This repository contains the official Pytorch implementation for the paper [***A
 
 ## 📦 Install
 
-Create the conda environment and install ***<span style="font-variant: small-caps;">DySymNet</span>*** :
+Install ***<span style="font-variant: small-caps;">DySymNet</span>*** using only one command:
 
 ```setup
-conda create -n dysymnet python=3.8
-conda activate dysymnet
 pip install DySymNet
 ```
 
