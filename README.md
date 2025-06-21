@@ -198,12 +198,11 @@ log(1 + MSE):  4.3587355946774144e-13
 If you find our work and this codebase helpful, please consider starring this repo and cite:
 
 ```bibtex
-@inproceedings{
-li2024a,
-title={A Neural-Guided Dynamic Symbolic Network for Exploring Mathematical Expressions from Data},
-author={Wenqiang Li and Weijun Li and Lina Yu and Min Wu and Linjun Sun and Jingyi Liu and Yanjie Li and Shu Wei and Deng Yusong and Meilan Hao},
-booktitle={Forty-first International Conference on Machine Learning},
-year={2024},
-url={https://openreview.net/forum?id=IejxxE9DO2}
+@inproceedings{li2024neural,
+  title={A neural-guided dynamic symbolic network for exploring mathematical expressions from data},
+  author={Li, Wenqiang and Li, Weijun and Yu, Lina and Wu, Min and Sun, Linjun and Liu, Jingyi and Li, Yanjie and Wei, Shu and Deng, Yusong and Hao, Meilan},
+  booktitle={Proceedings of the 41st International Conference on Machine Learning},
+  pages={28222--28242},
+  year={2024}
 }
 ```

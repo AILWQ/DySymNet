@@ -1,0 +1,426 @@
+@article{1,
+  title={Imagenet classification with deep convolutional neural networks},
+  author={Krizhevsky, Alex and Sutskever, Ilya and Hinton, Geoffrey E},
+  journal={Advances in neural information processing systems},
+  volume={25},
+  year={2012}
+}
+
+@inproceedings{2,
+  title={Facenet: A unified embedding for face recognition and clustering},
+  author={Schroff, Florian and Kalenichenko, Dmitry and Philbin, James},
+  booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
+  pages={815--823},
+  year={2015}
+}
+
+@article{3,
+  title={Neural machine translation by jointly learning to align and translate},
+  author={Bahdanau, Dzmitry},
+  journal={arXiv preprint arXiv:1409.0473},
+  year={2014}
+}
+
+@article{4,
+  title={Mastering the game of Go with deep neural networks and tree search},
+  author={Silver, David and Huang, Aja and Maddison, Chris J and Guez, Arthur and Sifre, Laurent and Van Den Driessche, George and Schrittwieser, Julian and Antonoglou, Ioannis and Panneershelvam, Veda and Lanctot, Marc and others},
+  journal={nature},
+  volume={529},
+  number={7587},
+  pages={484--489},
+  year={2016},
+  publisher={Nature Publishing Group}
+}
+
+@article{5,
+  title={Grandmaster level in StarCraft II using multi-agent reinforcement learning},
+  author={Vinyals, Oriol and Babuschkin, Igor and Czarnecki, Wojciech M and Mathieu, Micha{\"e}l and Dudzik, Andrew and Chung, Junyoung and Choi, David H and Powell, Richard and Ewalds, Timo and Georgiev, Petko and others},
+  journal={nature},
+  volume={575},
+  number={7782},
+  pages={350--354},
+  year={2019},
+  publisher={Nature Publishing Group}
+}
+
+@article{6,
+  title={The chips are down for Moore’s law},
+  author={Waldrop, M Mitchell},
+  journal={Nature News},
+  volume={530},
+  number={7589},
+  pages={144},
+  year={2016}
+}
+
+@article{7,
+  title={The N3XT approach to energy-efficient abundant-data computing},
+  author={Aly, Mohamed M Sabry and Wu, Tony F and Bartolo, Andrew and Malviya, Yash H and Hwang, William and Hills, Gage and Markov, Igor and Wootters, Mary and Shulaker, Max M and Wong, H-S Philip and others},
+  journal={Proceedings of the IEEE},
+  volume={107},
+  number={1},
+  pages={19--48},
+  year={2018},
+  publisher={IEEE}
+}
+
+@article{8,
+  title={Recent progress in semiconductor excitable lasers for photonic spike processing},
+  author={Prucnal, Paul R and Shastri, Bhavin J and Ferreira de Lima, Thomas and Nahmias, Mitchell A and Tait, Alexander N},
+  journal={Advances in Optics and Photonics},
+  volume={8},
+  number={2},
+  pages={228--299},
+  year={2016},
+  publisher={Optical Society of America}
+}
+
+@article{9,
+  title={Finding a roadmap to achieve large neuromorphic hardware systems},
+  author={Hasler, Jennifer and Marr, Bo},
+  journal={Frontiers in neuroscience},
+  volume={7},
+  pages={118},
+  year={2013},
+  publisher={Frontiers Media SA}
+}
+
+@article{10,
+  title={A million spiking-neuron integrated circuit with a scalable communication network and interface},
+  author={Merolla, Paul A and Arthur, John V and Alvarez-Icaza, Rodrigo and Cassidy, Andrew S and Sawada, Jun and Akopyan, Filipp and Jackson, Bryan L and Imam, Nabil and Guo, Chen and Nakamura, Yutaka and others},
+  journal={Science},
+  volume={345},
+  number={6197},
+  pages={668--673},
+  year={2014},
+  publisher={American Association for the Advancement of Science}
+}
+
+@article{11,
+  title={Loihi: A neuromorphic manycore processor with on-chip learning},
+  author={Davies, Mike and Srinivasa, Narayan and Lin, Tsung-Han and Chinya, Gautham and Cao, Yongqiang and Choday, Sri Harsha and Dimou, Georgios and Joshi, Prasad and Imam, Nabil and Jain, Shweta and others},
+  journal={Ieee Micro},
+  volume={38},
+  number={1},
+  pages={82--99},
+  year={2018},
+  publisher={IEEE}
+}
+
+@article{12,
+  title={SpiNNaker: A 1-W 18-core system-on-chip for massively-parallel neural network simulation},
+  author={Painkras, Eustace and Plana, Luis A and Garside, Jim and Temple, Steve and Galluppi, Francesco and Patterson, Cameron and Lester, David R and Brown, Andrew D and Furber, Steve B},
+  journal={IEEE Journal of Solid-State Circuits},
+  volume={48},
+  number={8},
+  pages={1943--1953},
+  year={2013},
+  publisher={IEEE}
+}
+
+@article{13,
+  title={Neurogrid: A mixed-analog-digital multichip system for large-scale neural simulations},
+  author={Benjamin, Ben Varkey and Gao, Peiran and McQuinn, Emmett and Choudhary, Swadesh and Chandrasekaran, Anand R and Bussat, Jean-Marie and Alvarez-Icaza, Rodrigo and Arthur, John V and Merolla, Paul A and Boahen, Kwabena},
+  journal={Proceedings of the IEEE},
+  volume={102},
+  number={5},
+  pages={699--716},
+  year={2014},
+  publisher={IEEE}
+}
+
+@article{14,
+  title={Towards artificial general intelligence with hybrid Tianjic chip architecture},
+  author={Pei, Jing and Deng, Lei and Song, Sen and Zhao, Mingguo and Zhang, Youhui and Wu, Shuang and Wang, Guanrui and Zou, Zhe and Wu, Zhenzhi and He, Wei and others},
+  journal={Nature},
+  volume={572},
+  number={7767},
+  pages={106--111},
+  year={2019},
+  publisher={Nature Publishing Group UK London}
+}
+
+@article{15,
+  title={Darwin: A neuromorphic hardware co-processor based on spiking neural networks},
+  author={Ma, De and Shen, Juncheng and Gu, Zonghua and Zhang, Ming and Zhu, Xiaolei and Xu, Xiaoqiang and Xu, Qi and Shen, Yangjing and Pan, Gang},
+  journal={Journal of systems architecture},
+  volume={77},
+  pages={43--51},
+  year={2017},
+  publisher={Elsevier}
+}
+
+@article{16,
+  title={Hybrid computing using a neural network with dynamic external memory},
+  author={Graves, Alex and Wayne, Greg and Reynolds, Malcolm and Harley, Tim and Danihelka, Ivo and Grabska-Barwi{\'n}ska, Agnieszka and Colmenarejo, Sergio G{\'o}mez and Grefenstette, Edward and Ramalho, Tiago and Agapiou, John and others},
+  journal={Nature},
+  volume={538},
+  number={7626},
+  pages={471--476},
+  year={2016},
+  publisher={Nature Publishing Group UK London}
+}
+
+@article{17,
+  title={Rationale and challenges for optical interconnects to electronic chips},
+  author={Miller, David AB},
+  journal={Proceedings of the IEEE},
+  volume={88},
+  number={6},
+  pages={728--749},
+  year={2000},
+  publisher={IEEE}
+}
+
+@article{18,
+  title={Broadcast and weight: an integrated network for scalable photonic spike processing},
+  author={Tait, Alexander N and Nahmias, Mitchell A and Shastri, Bhavin J and Prucnal, Paul R},
+  journal={Journal of Lightwave Technology},
+  volume={32},
+  number={21},
+  pages={3427--3439},
+  year={2014},
+  publisher={IEEE}
+}
+
+@article{19,
+  title={Photonic spike processing: ultrafast laser neurons and an integrated photonic network},
+  author={Shastri, Bhavin J and Tait, Alexander N and Nahmias, Mitchell A and Prucnal, Paul R},
+  journal={arXiv preprint arXiv:1407.2917},
+  year={2014}
+}
+
+@article{20,
+  title={Solitary and coupled semiconductor ring lasers as optical spiking neurons},
+  author={Coomans, Werner and Gelens, Lendert and Beri, Stefano and Danckaert, Jan and Van der Sande, Guy},
+  journal={Physical Review E—Statistical, Nonlinear, and Soft Matter Physics},
+  volume={84},
+  number={3},
+  pages={036209},
+  year={2011},
+  publisher={APS}
+}
+
+@article{21,
+  title={Oscillations and multistability in two semiconductor ring lasers coupled by a single waveguide},
+  author={Coomans, Werner and Van der Sande, Guy and Gelens, Lendert},
+  journal={Physical Review A—Atomic, Molecular, and Optical Physics},
+  volume={88},
+  number={3},
+  pages={033813},
+  year={2013},
+  publisher={APS}
+}
+
+@article{22,
+  title={Photonic computing with single and coupled spiking micropillar lasers},
+  author={Pammi, Venkata Anirudh and Alfaro-Bittner, Karin and Clerc, Marcel G and Barbay, Sylvain},
+  journal={IEEE Journal of Selected Topics in Quantum Electronics},
+  volume={26},
+  number={1},
+  pages={1--7},
+  year={2019},
+  publisher={IEEE}
+}
+
+@article{23,
+  title={A leaky integrate-and-fire laser neuron for ultrafast cognitive computing},
+  author={Nahmias, Mitchell A and Shastri, Bhavin J and Tait, Alexander N and Prucnal, Paul R},
+  journal={IEEE journal of selected topics in quantum electronics},
+  volume={19},
+  number={5},
+  pages={1--12},
+  year={2013},
+  publisher={IEEE}
+}
+
+@article{24,
+  title={Photonic integrated spiking neuron chip based on a self-pulsating DFB laser with a saturable absorber},
+  author={Shi, Yuechun and Xiang, Shuiying and Guo, Xingxing and Zhang, Yahui and Wang, Hongji and Zheng, Dianzhuang and Zhang, Yuna and Han, Yanan and Zhao, Yong and Zhu, Xiaojun and others},
+  journal={Photonics Research},
+  volume={11},
+  number={8},
+  pages={1382--1389},
+  year={2023},
+  publisher={Optica Publishing Group}
+}
+
+@article{25,
+  title={Hardware-algorithm collaborative computing with photonic spiking neuron chip based on an integrated Fabry--Perot laser with a saturable absorber},
+  author={Xiang, Shuiying and Shi, Yuechun and Guo, Xingxing and Zhang, Yahui and Wang, Hongji and Zheng, Dianzhuang and Song, Ziwei and Han, Yanan and Gao, Shuang and Zhao, Shihao and others},
+  journal={Optica},
+  volume={10},
+  number={2},
+  pages={162--171},
+  year={2023},
+  publisher={Optica Publishing Group}
+}
+
+@article{26,
+  title={Design of optoelectronic computing circuits with VCSEL-SA based neuromorphic photonic spiking},
+  author={Gupta, Sujal and Gahlot, Surbhi and Roy, Sukhdev},
+  journal={Optik},
+  volume={243},
+  pages={167344},
+  year={2021},
+  publisher={Elsevier}
+}
+
+@article{27,
+  title={The winner-take-all mechanism for all-optical systems of pattern recognition and max-pooling operation},
+  author={Zhang, Yahui and Xiang, Shuiying and Guo, Xingxing and Wen, Aijun and Hao, Yue},
+  journal={Journal of Lightwave Technology},
+  volume={38},
+  number={18},
+  pages={5071--5077},
+  year={2020},
+  publisher={IEEE}
+}
+
+@article{28,
+  title={Optical neuron using polarisation switching in a 1550nm-VCSEL},
+  author={Hurtado, Antonio and Henning, Ian D and Adams, Michael J},
+  journal={Optics express},
+  volume={18},
+  number={24},
+  pages={25170--25176},
+  year={2010},
+  publisher={Optica Publishing Group}
+}
+
+@article{29,
+  title={Controllable spiking patterns in long-wavelength vertical cavity surface emitting lasers for neuromorphic photonics systems},
+  author={Hurtado, Antonio and Javaloyes, Julien},
+  journal={Applied Physics Letters},
+  volume={107},
+  number={24},
+  year={2015},
+  publisher={AIP Publishing}
+}
+
+@article{30,
+  title={Emulation of spiking response and spiking frequency property in VCSEL-based photonic neuron},
+  author={Xiang, Shuiying and Wen, Aijun and Pan, Wei},
+  journal={IEEE Photonics Journal},
+  volume={8},
+  number={5},
+  pages={1--9},
+  year={2016},
+  publisher={IEEE}
+}
+
+@inproceedings{31,
+  title={Experimental study of the neuron-like dynamics of a semiconductor laser with optical feedback and current modulation},
+  author={Tiana-Alsina, Jordi and Quintero-Quiroz, Carlos and Masoller, Cristina},
+  booktitle={Semiconductor Lasers and Laser Dynamics IX},
+  volume={11356},
+  pages={94--99},
+  year={2020},
+  organization={SPIE}
+}
+
+@article{32,
+  title={Computing primitive of fully VCSEL-based all-optical spiking neural network for supervised learning and pattern classification},
+  author={Xiang, Shuiying and Ren, Zhenxing and Song, Ziwei and Zhang, Yahui and Guo, Xingxing and Han, Genquan and Hao, Yue},
+  journal={IEEE transactions on neural networks and learning systems},
+  volume={32},
+  number={6},
+  pages={2494--2505},
+  year={2020},
+  publisher={IEEE}
+}
+
+@article{33,
+  title={Photonic spiking neural network based on excitable VCSELs-SA for sound azimuth detection},
+  author={Song, Zi Wei and Xiang, Shui Ying and Ren, Zhen Xing and Wang, Su Hong and Wen, Ai Jun and Hao, Yue},
+  journal={Optics Express},
+  volume={28},
+  number={2},
+  pages={1561--1573},
+  year={2020},
+  publisher={Optica Publishing Group}
+}
+
+@article{34,
+  title={Photonic associative learning neural network based on VCSELs and STDP},
+  author={Wang, Suhong and Xiang, Shuiying and Han, Genquan and Song, Ziwei and Ren, Zhenxing and Wen, Aijun and Hao, Yue},
+  journal={Journal of Lightwave Technology},
+  volume={38},
+  number={17},
+  pages={4691--4698},
+  year={2020},
+  publisher={IEEE}
+}
+
+@article{35,
+  title={Narrow-linewidth semiconductor laser with high-order sidewall gratings},
+  author={Xu, Yuanbo and Wang, Mingjin and Qu, Hongwei and Liu, Wenzhen and Fu, Ting and Li, Jing and Du, Fangling and Zheng, Wanhua},
+  journal={IEEE Photonics Technology Letters},
+  volume={35},
+  number={2},
+  pages={85--88},
+  year={2022},
+  publisher={IEEE}
+}
+
+@article{36,
+  title={Design and simulation of two-section DFB lasers with short active-section lengths},
+  author={Zhao, Gongyuan and Sun, Junqiang and Xi, Yanping and Gao, Dingshan and Lu, Qiaoyin and Guo, Weihua},
+  journal={Optics Express},
+  volume={24},
+  number={10},
+  pages={10590--10598},
+  year={2016},
+  publisher={Optica Publishing Group}
+}
+
+@article{37,
+  title={An efficient split-step time-domain dynamic modeling of DFB/DBR laser diodes},
+  author={Kim, Byoung-Sung and Chung, Youngchul and Lee, Jae-Seung},
+  journal={IEEE journal of quantum electronics},
+  volume={36},
+  number={7},
+  pages={787--794},
+  year={2000},
+  publisher={IEEE}
+}
+
+@article{38,
+  title={Dynamic analysis of radiation and side-mode suppression in a second-order DFB laser using time-domain large-signal traveling wave model},
+  author={Zhang, LM and Yu, Siu Fung and Nowell, MC and Marcenac, DD and Carroll, JE and Plumb, RGS},
+  journal={IEEE Journal of Quantum Electronics},
+  volume={30},
+  number={6},
+  pages={1389--1395},
+  year={1994},
+  publisher={IEEE}
+}
+
+@article{39,
+  title={Phase-space analysis of a two-section InP laser as an all-optical spiking neuron: dependency on control and design parameters},
+  author={Puts, Lukas and Lenstra, Daan and Williams, Kevin and Yao, Weiming},
+  journal={Neuromorphic Computing and Engineering},
+  year={2024}
+}
+
+@article{40,
+  title={Self-pulsations of lasers with saturable absorber: dynamics and bifurcations},
+  author={Dubbeldam, Johan LA and Krauskopf, Bernd},
+  journal={Optics communications},
+  volume={159},
+  number={4-6},
+  pages={325--338},
+  year={1999},
+  publisher={Elsevier}
+}
+
+@article{41,
+  author={Xiaodong Huang and Stintz, A. and Hua Li and Rice, A. and Liu, G.T. and Lester, L.P. and Cheng, J. and Malloy, M.J.},
+  journal={IEEE Journal of Quantum Electronics}, 
+  title={Bistable operation of a two-section 1.3 /spl mu/m InAs quantum dot laser-absorption saturation and the quantum confined Stark effect}, 
+  year={2001},
+  volume={37},
+  number={3},
+  pages={414-417},
+  keywords={Quantum dot lasers;US Department of Transportation;Potential well;Stark effect;Optical bistability;Optical modulation;Gallium arsenide;Quantum dots;Hysteresis;Absorption},
+  doi={10.1109/3.910451}}
