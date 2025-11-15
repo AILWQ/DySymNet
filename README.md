@@ -138,23 +138,41 @@ We provide two ways to perform symbolic regression tasks.
 
 #### Option1: Input ground truth expression
 
-When you want to discover an expression for which the ground truth is known, for example to test a standard benchmark, you can edit the script `SymbolicRegression.py`  as follows:
+When you want to discover an expression for which the ground truth is known, for example to test a standard benchmark, you can run the script `Demo.py`  as follows:
 
 ```python
-# SymbolicRegression.py
+# Demo.py
+import numpy as np
+from DySymNet import SymbolicRegression
+from DySymNet.scripts.params import Params
+from DySymNet.scripts.functions import *
+
+# You can customize some hyperparameters according to READEME
+config = Params()
+
+# config operators 
+funcs = [Identity(), Sin(), Cos(), Square(), Plus(), Sub(), Product()]
+config.funcs_avail = funcs
 params = Params()  # configuration for a specific task
+
+# input ground truth expression
 ground_truth_eq = "x_1 + x_2"  # variable names should be written as x_i, where i>=1.
 eq_name = "x_1+x_2"
-SR = SymbolicRegression(config=params, func=ground_truth_eq, fun_name=eq_name)  # A new folder named "func_name" will be created to store the result files.
+SR = SymbolicRegression.SymbolicRegression(config=params, func=ground_truth_eq, fun_name=eq_name)  # A new folder named "func_name" will be created to store the result files.
 eq, R2, error, relative_error = SR.solve_environment()  # return results
+print('Expression: ', eq)
+print('R2: ', R2)
+print('error: ', error)
+print('relative_error: ', relative_error)
+print('log(1 + MSE): ', np.log(1 + error))
 ```
 
 In this way, the function `generate_data` is used to automatically generate the corresponding data set $\mathcal{D}(X, y)$ for inference, instead of you generating the data yourself.
 
-Then, you can run `SymbolicRegression.py` directly, or you can run it in the terminal as follows:
+Then, you can run `Demo.py` directly, or you can run it in the terminal as follows:
 
 ```python
-python SymbolicRegression.py
+python Demo.py
 ```
 
 After running this script, the results will be stored in path `./results/test/func_name`.
@@ -164,19 +182,37 @@ After running this script, the results will be stored in path `./results/test/fu
 When you only have observed data and do not know the ground truth, you can perform symbolic regression by entering the path to the csv data file:
 
 ```python
-# SymbolicRegression.py
+# Demo.py
+import numpy as np
+from DySymNet import SymbolicRegression
+from DySymNet.scripts.params import Params
+from DySymNet.scripts.functions import *
+
+# You can customize some hyperparameters according to READEME
+config = Params()
+
+# config operators 
+funcs = [Identity(), Sin(), Cos(), Square(), Plus(), Sub(), Product()]
+config.funcs_avail = funcs
 params = Params()  # configuration for a specific task
+
+# specify the data file path
 data_path = './data/Nguyen-1.csv'  # data file should be in csv format
-SR = SymbolicRegression(config=params, func_name='Nguyen-1', data_path=data_path)  # you can rename the func_name as any other you want.
+SR = SymbolicRegression.SymbolicRegression(config=params, func_name='Nguyen-1', data_path=data_path)  # you can rename the func_name as any other you want.
 eq, R2, error, relative_error = SR.solve_environment()  # return results
+print('Expression: ', eq)
+print('R2: ', R2)
+print('error: ', error)
+print('relative_error: ', relative_error)
+print('log(1 + MSE): ', np.log(1 + error))
 ```
 
 **Note:** the data file should contains ($X\_{dim} + 1$) colums, which $X\_{dim}$ is the number of independent variables and the last colum is the corresponding $y$ values.
 
-Then, you can run `SymbolicRegression.py` directly, or you can run it in the terminal as follows:
+Then, you can run `Demo.py` directly, or you can run it in the terminal as follows:
 
 ```python
-python SymbolicRegression.py
+python Demo.py
 ```
 
 After running this script, the results will be stored in path `./results/test/func_name`.
